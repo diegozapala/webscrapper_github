@@ -2,41 +2,41 @@ require "rails_helper"
 
 RSpec.describe "Profiles", type: :request do
   let(:profile) { create(:profile) }
-  let(:params) { {name: "Matz 2", url: "https://github.com/matz"} }
-  let(:invalid_params) { {name: "Matz 2", url: Faker::Internet.url} }
+  let(:params) { { name: "Matz 2", url: "https://github.com/matz" } }
+  let(:invalid_params) { { name: "Matz 2", url: Faker::Internet.url } }
 
   describe "GET /index" do
     it "renders the index template" do
       profile
       get "/"
 
-      expect(assigns(:profiles)).to eq([profile])
+      expect(assigns(:profiles)).to eq([ profile ])
       expect(response).to render_template(:index)
     end
 
     it "when searching by name" do
       get "/?search=#{profile.name}"
-      expect(assigns(:profiles)).to eq([profile])
+      expect(assigns(:profiles)).to eq([ profile ])
     end
 
     it "when searching by url" do
       get "/?search=#{profile.url}"
-      expect(assigns(:profiles)).to eq([profile])
+      expect(assigns(:profiles)).to eq([ profile ])
     end
 
     it "when searching by username" do
       get "/?search=#{profile.username}"
-      expect(assigns(:profiles)).to eq([profile])
+      expect(assigns(:profiles)).to eq([ profile ])
     end
 
     it "when searching by organization" do
       get "/?search=#{profile.organization}"
-      expect(assigns(:profiles)).to eq([profile])
+      expect(assigns(:profiles)).to eq([ profile ])
     end
 
     it "when searching by location" do
       get "/?search=#{profile.location}"
-      expect(assigns(:profiles)).to eq([profile])
+      expect(assigns(:profiles)).to eq([ profile ])
     end
 
     it "when searching with invalid parameters" do
