@@ -75,7 +75,7 @@ RSpec.describe "Profiles", type: :request do
     end
 
     it "when the parameters are invalid" do
-      post "/profiles", :params => invalid_params
+      post "/profiles", params: invalid_params
 
       expect(Profile.first).to be_nil
       expect(response).to redirect_to("/profiles/new")
@@ -103,7 +103,7 @@ RSpec.describe "Profiles", type: :request do
     end
 
     it "when the parameters are invalid" do
-      put "/profiles/#{profile.id}", :params => invalid_params
+      put "/profiles/#{profile.id}", params: invalid_params
 
       expect(Profile.first.name).to eq(profile.name)
       expect(response).to redirect_to("/profiles/#{profile.id}/edit")

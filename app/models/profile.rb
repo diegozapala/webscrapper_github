@@ -4,7 +4,7 @@ class Profile < ApplicationRecord
 
   before_save :set_default_params
 
-  scope :tag_like,->(tag) { where("array_to_string(tags, '||') ILIKE ?", "%#{I18n.transliterate(tag)}%") }
+  scope :tag_like, ->(tag) { where("array_to_string(tags, '||') ILIKE ?", "%#{I18n.transliterate(tag)}%") }
 
   def set_default_params
     self.tags = build_tags(for_tags)
