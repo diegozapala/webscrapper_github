@@ -33,7 +33,7 @@ module WebscrapperGithub
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
-    Rails.application.routes.default_url_options[:host] = ENV["HOST"]
+    # Rails.application.routes.default_url_options[:host] = ENV["HOST"]
     config.time_zone = "America/Sao_Paulo"
 
     # Don't generate system test files.
