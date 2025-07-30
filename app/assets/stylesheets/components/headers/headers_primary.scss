@@ -1,0 +1,53 @@
+@use "../../theme" as *;
+
+.headers_primary {
+  width: 100vw;
+  height: 70px;
+  background-color: $color-background-heavy;
+  padding: 0 400px;
+
+  .container {
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo_box {
+      height: 100%;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .nav_box {
+      height: 100%;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+
+      .btn_box {
+        margin-left: 10px;
+      }
+
+      .btn_box_mobile {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: $mobile-size) {
+    padding: 0 20px;
+
+    .container {
+      .nav_box {
+        .btn_box {
+          display: none;
+        }
+
+        .btn_box_mobile {
+          display: flex;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<header class="headers headers_primary">
+  <div class="container">
+    <div class="logo_box">
+      <%= link_to root_path do %>
+        <%= render partial: "components/logos/logo", locals: {color: "primary", size: "medium"} %>
+      <% end %>
+    </div>
+
+    <nav class="nav_box">
+      <div class="btn_box">
+        <%= render partial: "components/buttons/secondary", locals: {url: root_path, color: "primary", target: "",
+                                                                     icon: "home", content: "Início", method: :get} %>
+      </div>
+
+      <div class="btn_box">
+        <%= render partial: "components/buttons/primary", locals: {url: profiles_new_path, color: "secondary", target: "",
+                                                                   icon: "person_add", content: "Novo perfil", method: :get} %>
+      </div>
+
+      <div class="btn_box_mobile">
+        <%= render partial: "components/buttons/icon", locals: {url: profiles_new_path, color: "secondary", target: "",
+                                                                icon: "person_add", content: "Novo perfil", method: :get} %>
+      </div>
+    </nav>
+  </div>
+</header>

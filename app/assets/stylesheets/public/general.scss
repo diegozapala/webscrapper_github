@@ -1,0 +1,48 @@
+@use "../theme" as *;
+
+.page {
+  width: 100vw;
+  padding: 30px 400px;
+
+  .content {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  @media (max-width: $mobile-size) {
+    padding: 30px 20px;
+  }
+}
+
+.center {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+table {
+  background-color: $color-background-heavy;
+  border-radius: $border-radius;
+  border-spacing: 0px 10px;
+
+  thead {
+    th {
+      border-bottom: $border-light;
+      padding-bottom: 10px;
+    }
+  }
+
+  tbody {
+    tr {
+      background-color: transparent;
+      &:hover {
+        background-color: $color-cover;
+        color: $color-off-white;
+        transition-duration: 200ms;
+      }
+    }
+    td {
+      padding: 10px 0;
+    }
+  }
+}

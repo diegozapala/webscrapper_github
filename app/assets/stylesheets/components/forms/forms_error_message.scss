@@ -1,0 +1,12 @@
+@use "../../theme" as *;
+
+.forms_error_message {
+  margin: 5px 0 0 5px;
+
+  .error {
+    color: $color-error;
+    font-family: $font-text;
+    font-size: $font-size-text-small;
+  }
+}
+

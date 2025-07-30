@@ -1,0 +1,87 @@
+@use "theme" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  color: $color-text-light;
+  background-color: $color-primary;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  background-color: $color-background-soft;
+  color: $color-text-dark;
+  font-family: $font-text;
+  font-size: $font-size-text;
+  font-weight: 400;
+  letter-spacing: .5px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+  background-color: $color-background-heavy;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $color-primary;
+}
+
+div, main, section, header, footer, nav, figure {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: $color-primary;
+}
+
+a:focus, a:active {
+  outline: none;
+  text-decoration: none;
+  color: $color-secondary;
+}
+
+a:hover {
+  color: $color-secondary;
+  text-decoration: none;
+}
+
+figure {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin-block-start: 0;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  "FILL" 0,
+  "wght" 300,
+  "GRAD" 0,
+  "opsz" 48
+}
+
+.svg-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

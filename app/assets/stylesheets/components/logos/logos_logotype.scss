@@ -1,0 +1,10 @@
+@use "../../theme" as *;
+
+.logos_logotype {
+  justify-content: center;
+  align-items: center;
+
+  .medium {
+    width: 60px;
+  }
+}

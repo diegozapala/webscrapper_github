@@ -1,0 +1,38 @@
+@use "externals";
+@use "font_proj";
+@use "globals";
+
+
+// COMPONENTS
+
+@use "components/alerts/alerts_general";
+
+@use "components/buttons/buttons_general";
+@use "components/buttons/buttons_primary";
+@use "components/buttons/buttons_secondary";
+@use "components/buttons/buttons_icon";
+
+@use "components/forms/forms_btn_cancel";
+@use "components/forms/forms_btn_submit";
+@use "components/forms/forms_error_message";
+@use "components/forms/forms_input_text";
+@use "components/forms/forms_label";
+
+@use "components/headers/headers_primary";
+
+@use "components/loaders/loaders_primary";
+
+@use "components/logos/logos_logo";
+@use "components/logos/logos_logotype";
+
+@use "components/texts/texts_text";
+@use "components/texts/texts_title";
+
+
+// PUBLIC
+
+@use "public/general";
+
+@use "public/profile/profile";
+@use "public/profile/show";
+@use "public/profile/new_and_edit_form";

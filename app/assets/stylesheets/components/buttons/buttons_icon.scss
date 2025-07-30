@@ -1,0 +1,30 @@
+@use "../../theme" as *;
+
+.buttons_icon {
+  .buttons_link {
+    width: 45px;
+    height: 45px;
+
+    &.primary {
+      background-color: $color-primary;
+      border: $border-primary;
+      color: $color-text-light;
+
+      &:hover {
+        background-color: $color-primary-hover;
+        transition-duration: 200ms;
+      }
+    }
+
+    &.secondary {
+      background-color: $color-secondary;
+      border: $border-secondary;
+      color: $color-text-light;
+
+      &:hover {
+        background-color: $color-secondary-hover;
+        transition-duration: 200ms;
+      }
+    }
+  }
+}

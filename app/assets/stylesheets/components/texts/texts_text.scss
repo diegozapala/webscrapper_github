@@ -1,0 +1,30 @@
+@use "../../theme" as *;
+
+.texts_text {
+  font-family: $font-text;
+  font-weight: 400;
+  display: inline;
+
+  b {
+    font-weight: 700;
+  }
+
+  &.medium {
+    font-size: $font-size-text;
+    line-height: 20px;
+    letter-spacing: 1px;
+  }
+
+  &.light {
+    color: $color-text-light;
+  }
+  &.dark {
+    color: $color-text-dark;
+  }
+  &.primary {
+    color: $color-primary;
+  }
+  &.secondary {
+    color: $color-secondary;
+  }
+}

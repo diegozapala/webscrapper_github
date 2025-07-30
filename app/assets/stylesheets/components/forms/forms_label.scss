@@ -1,0 +1,13 @@
+@use "../../theme" as *;
+
+.forms_label {
+  margin: 5px 0 0 5px;
+
+  .label_field {
+    color: $color-primary;
+    font-family: $font-title;
+    font-size: $font-size-text-large;
+    font-weight: bold;
+  }
+}
+

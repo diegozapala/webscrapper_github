@@ -1,0 +1,48 @@
+<section id="profiles_index" class="page">
+  <div class="title_box">
+    <%= render partial: "components/texts/title", locals: {color: "dark", size: "medium", content: "Todos os perfis"} %>
+  </div>
+
+  <main class="content">
+    <div class="search_box">
+      <%= form_tag(root_path, method: :get, id: "search_form", class: "search_form") do %>
+        <div class="field_item_box">
+          <div class="input_box"><%= render partial: "components/forms/input_text", locals: {label: "search", value: "", placeholder: "Pesquisar..."} %></div>
+          <%= render partial: "components/forms/error_message", locals: {label: "search"} %>
+        </div>
+
+        <div class="btn_box"><%= render partial: "components/forms/btn_submit", locals: {label: "Pesquisar"} %></div>
+      <% end %>
+    </div>
+
+    <div class="list_box">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>URL Encurtada</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @profiles.each do |profile| %>
+            <tr>
+              <td class="center"><%= profile.name %></td>
+              <td class="center">
+                <%= link_to(profile.url, profile.url, target: "blank") %>
+              </td>
+              <td class="center">
+                <%= render partial: "components/buttons/icon", locals: {url: "/profiles/#{profile.id}", color: "primary", target: "",
+                                                                       icon: "list_alt", content: "Detalhes", method: :get} %>
+
+                <%= render partial: "components/buttons/icon", locals: {url: "/profiles/#{profile.id}/edit", color: "secondary", target: "",
+                                                                       icon: "edit_square", content: "Editar", method: :get} %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</section>

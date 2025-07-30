@@ -1,0 +1,13 @@
+<section id="profiles_new" class="page">
+  <div class="title_box">
+    <%= render partial: "components/texts/title", locals: {color: "dark", size: "medium", content: "Novo perfil"} %>
+  </div>
+
+  <main class="content">
+    <%= render partial: "new_and_edit_form",
+      locals: {url: "/profiles", method: :post, id: "profile_form",
+               submit_label: "Salvar", cancel_label: "Cancelar", cancel_url: root_path,
+               field_items: [{visible_label: "Nome"               , label: "name", placeholder: "Digite o nome"},
+                             {visible_label: "Endereço web Github", label: "url" , placeholder: "https://github.com/username"}]} %>
+  </main>
+</section>

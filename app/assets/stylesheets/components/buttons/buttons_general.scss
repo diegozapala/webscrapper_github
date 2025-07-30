@@ -1,0 +1,34 @@
+@use "../../theme" as *;
+
+.buttons {
+  display: ruby;
+
+  .buttons_link {
+    border-radius: $border-radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 200ms;
+
+    .btn_icon {
+      font-size: $font-size-icon;
+    }
+  }
+
+  &.buttons_primary, &.buttons_secondary {
+    .buttons_link {
+      width: 100%;
+      height: 50px;
+      font-family: $font-text;
+      font-weight: 500;
+      font-size: $font-size-text;
+      letter-spacing: 1.5px;
+      padding: 0 15px;
+
+      .btn_icon {
+        margin-right: 10px;
+      }
+    }
+  }
+
+}

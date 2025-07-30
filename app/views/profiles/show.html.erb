@@ -1,0 +1,112 @@
+<section id="profiles_show" class="page">
+  <div class="title_box">
+    <%= render partial: "components/texts/title", locals: {color: "dark", size: "medium", content: "Detalhes do perfil"} %>
+  </div>
+
+  <main class="content">
+    <div class="action_box">
+      <div class="btn_box rescan">
+        <%= render partial: "components/buttons/primary", locals: {url: "/profiles/#{@profile.id}/rescan", color: "secondary", target: "",
+                                                                   icon: "replay", content: "Re-escanear", method: :patch} %>
+      </div>
+
+      <div class="btn_box_mobile rescan">
+        <%= render partial: "components/buttons/icon", locals: {url: "/profiles/#{@profile.id}/rescan", color: "secondary", target: "",
+                                                                icon: "replay", content: "Re-escanear", method: :patch} %>
+      </div>
+
+      <div class="btn_box">
+        <%= render partial: "components/buttons/primary", locals: {url: "/profiles/#{@profile.id}/edit", color: "secondary", target: "",
+                                                                   icon: "edit_square", content: "Editar", method: :get} %>
+      </div>
+
+      <div class="btn_box_mobile">
+        <%= render partial: "components/buttons/icon", locals: {url: "/profiles/#{@profile.id}/edit", color: "secondary", target: "",
+                                                                icon: "edit_square", content: "Editar", method: :get} %>
+      </div>
+
+      <div class="btn_box">
+        <%= render partial: "components/buttons/primary", locals: {url: "/profiles/#{@profile.id}", color: "secondary", target: "",
+                                                                   icon: "delete", content: "Remover", method: :delete} %>
+      </div>
+
+      <div class="btn_box_mobile">
+        <%= render partial: "components/buttons/icon", locals: {url: "/profiles/#{@profile.id}", color: "secondary", target: "",
+                                                                icon: "delete", content: "Remover", method: :delete} %>
+      </div>
+    </div>
+
+    <div class="data_box">
+      <div class="image_box">
+        <figure class="profile_image_box">
+          <%= image_tag(@profile.image_url, class: "profile_image") %>
+        </figure>
+      </div>
+
+      <div class="details_box">
+        <div class="item">
+          <%= render partial: "components/texts/text", locals: {color: "dark", size: "medium", content: "<b>Nome: </b>"} %>
+          <div class="resp">
+            <%= render partial: "components/texts/text", locals: {color: "dark", size: "medium", content: @profile.name} %>
+          </div>
+        </div>
+
+        <div class="item">
+          <%= render partial: "components/texts/text", locals: {color: "dark", size: "medium", content: "<b>Endereço web Github: </b>"} %>
+          <div class="resp">
+            <%= render partial: "components/texts/text", locals: {color: "dark", size: "medium", content: @profile.url} %>
+          </div>
+        </div>
+
+        <div class="item">
+          <%= render partial: "components/texts/text", locals: {color: "dark", size: "medium", content: "<b>Nome de usuário Github: </b>"} %>
+          <div class="resp">
+            <%= render partial: "components/texts/text", locals: {color: "dark", size: "medium", content: @profile.username} %>
+          </div>
+        </div>
+
+        <div class="item">
+          <%= render partial: "components/texts/text", locals: {color: "dark", size: "medium", content: "<b>Número de followers: </b>"} %>
+          <div class="resp">
+            <%= render partial: "components/texts/text", locals: {color: "dark", size: "medium", content: @profile.followers_count} %>
+          </div>
+        </div>
+
+        <div class="item">
+          <%= render partial: "components/texts/text", locals: {color: "dark", size: "medium", content: "<b>Número de following: </b>"} %>
+          <div class="resp">
+            <%= render partial: "components/texts/text", locals: {color: "dark", size: "medium", content: @profile.following_count} %>
+          </div>
+        </div>
+
+        <div class="item">
+          <%= render partial: "components/texts/text", locals: {color: "dark", size: "medium", content: "<b>Número de stars: </b>"} %>
+          <div class="resp">
+            <%= render partial: "components/texts/text", locals: {color: "dark", size: "medium", content: @profile.stars_count} %>
+          </div>
+        </div>
+
+        <div class="item">
+          <%= render partial: "components/texts/text", locals: {color: "dark", size: "medium", content: "<b>Número de contribuições no último ano: </b>"} %>
+          <div class="resp">
+            <%= render partial: "components/texts/text", locals: {color: "dark", size: "medium", content: @profile.contributions_count} %>
+          </div>
+        </div>
+
+        <div class="item">
+          <%= render partial: "components/texts/text", locals: {color: "dark", size: "medium", content: "<b>Organização: </b>"} %>
+          <div class="resp">
+            <%= render partial: "components/texts/text", locals: {color: "dark", size: "medium", content: @profile.organization} %>
+          </div>
+        </div>
+
+        <div class="item">
+          <%= render partial: "components/texts/text", locals: {color: "dark", size: "medium", content: "<b>Localização: </b>"} %>
+          <div class="resp">
+            <%= render partial: "components/texts/text", locals: {color: "dark", size: "medium", content: @profile.location} %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</section>

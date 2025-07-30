@@ -1,0 +1,20 @@
+<div class="new_and_edit_form">
+  <%= form_tag(url, method: method, id: id, class: "profile_form") do %>
+
+    <% field_items.each do |item| %>
+      <div class="field_item_box">
+        <div class="label_box"><%= render partial: "components/forms/label", locals: {label: item[:label], visible_label: item[:visible_label]} %></div>
+
+        <div class="input_box"><%= render partial: "components/forms/input_text", locals: {label: item[:label], value: item[:value], placeholder: item[:placeholder]} %></div>
+
+        <%= render partial: "components/forms/error_message", locals: {label: item[:label]} %>
+      </div>
+    <% end %>
+
+    <div class="actions">
+      <div class="btn_box"><%= render partial: "components/forms/btn_submit", locals: {label: submit_label} %></div>
+      <div class="btn_box"><%= render partial: "components/forms/btn_cancel", locals: {label: cancel_label, url: cancel_url} %></div>
+    </div>
+
+  <% end %>
+</div>

@@ -1,0 +1,29 @@
+@use "../../theme" as *;
+
+.forms_btn_cancel {
+  display: ruby;
+
+  .btn_cancel {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border-radius: $border-radius;
+    border: $border-primary;
+    color: $color-primary;
+    font-family: $font-text;
+    font-weight: 500;
+    font-size: $font-size-text;
+    letter-spacing: 1.5px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 200ms;
+
+    &:hover {
+      background-color: $color-primary-hover;
+      color: $color-text-light;
+      transition-duration: 200ms;
+    }
+  }
+}

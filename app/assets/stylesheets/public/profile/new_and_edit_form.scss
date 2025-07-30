@@ -1,0 +1,34 @@
+@use "../../theme" as *;
+
+.new_and_edit_form {
+  .profile_form {
+
+    .field_item_box {
+      margin-bottom: 15px;
+      .label_box {
+        margin-bottom: 10px;
+      }
+    }
+
+    .actions {
+      margin-top: 20px;
+      flex-direction: row;
+      .btn_box {
+        margin-right: 10px;
+      }
+    }
+
+  }
+
+  @media (max-width: $mobile-size) {
+    .profile_form {
+      .actions {
+        flex-direction: column;
+        .btn_box {
+          margin-bottom: 10px;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

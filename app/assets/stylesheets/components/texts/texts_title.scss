@@ -1,0 +1,30 @@
+@use "../../theme" as *;
+
+.texts_title {
+  font-family: $font-title;
+  font-weight: 700;
+  display: inline;
+
+  b {
+    font-weight: 900;
+  }
+
+  &.medium {
+    font-size: $font-size-title;
+    line-height: 45px;
+    letter-spacing: 1.5px;
+  }
+
+  &.light {
+    color: $color-text-light;
+  }
+  &.dark {
+    color: $color-text-dark;
+  }
+  &.primary {
+    color: $color-primary;
+  }
+  &.secondary {
+    color: $color-secondary;
+  }
+}

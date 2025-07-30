@@ -1,0 +1,53 @@
+@use "../../theme" as *;
+
+.loaders_primary {
+  justify-content: center;
+  align-items: center;
+
+  &.local {
+    width: 100%;
+    height: 100%;
+    padding: 50px 0;
+  }
+
+  &.all {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-cover;
+    position: fixed;
+    z-index: 11111;
+  }
+
+  .loader_icon {
+    border-radius: 100%;
+    -webkit-animation: spin 100ms linear infinite; /* Safari */
+    animation: spin 800ms linear infinite;
+
+    &.medium {
+      border: 5px solid #aaa3;
+      border-top: 5px solid $color-secondary;
+      width: 60px;
+      height: 60px;
+    }
+
+    &.small {
+      border: 3px solid #aaa3;
+      border-top: 3px solid $color-secondary;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+}

@@ -1,0 +1,27 @@
+@use "../../theme" as *;
+
+.buttons_primary {
+  .buttons_link {
+    &.primary {
+      background-color: $color-primary;
+      border: $border-primary;
+      color: $color-text-light;
+
+      &:hover {
+        background-color: $color-primary-hover;
+        transition-duration: 200ms;
+      }
+    }
+
+    &.secondary {
+      background-color: $color-secondary;
+      border: $border-secondary;
+      color: $color-text-light;
+
+      &:hover {
+        background-color: $color-secondary-hover;
+        transition-duration: 200ms;
+      }
+    }
+  }
+}

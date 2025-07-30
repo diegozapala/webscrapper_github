@@ -1,0 +1,11 @@
+@use "../../theme" as *;
+
+.logos_logo {
+  justify-content: center;
+  align-items: center;
+
+  .medium {
+    width: 240px;
+  }
+}
+
