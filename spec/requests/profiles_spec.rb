@@ -68,7 +68,7 @@ RSpec.describe "Profiles", type: :request do
 
   describe "POST /create" do
     it "should create profile and redirect to root" do
-      post "/profiles", :params => params
+      post "/profiles", params: params
 
       expect(Profile.first.name).to eq(params[:name])
       expect(response).to redirect_to("/")
@@ -96,7 +96,7 @@ RSpec.describe "Profiles", type: :request do
 
   describe "PUT /update" do
     it "should update profile and redirect to root" do
-      put "/profiles/#{profile.id}", :params => params
+      put "/profiles/#{profile.id}", params: params
 
       expect(Profile.first.name).to eq(params[:name])
       expect(response).to redirect_to("/")
@@ -110,7 +110,7 @@ RSpec.describe "Profiles", type: :request do
     end
 
     it "when there is no record" do
-      put "/profiles/50", :params => params
+      put "/profiles/50", params: params
       expect(response).to redirect_to("/")
     end
   end
