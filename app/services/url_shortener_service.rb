@@ -53,6 +53,6 @@ class UrlShortenerService
   end
 
   def parse_to_json(string)
-    JSON.parse(string);
+    JSON.parse(string)
   end
 end

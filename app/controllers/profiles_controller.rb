@@ -1,7 +1,7 @@
 class ProfilesController < ApplicationController
   protect_from_forgery
 
-  before_action :validate_profile, only: [:show, :edit, :update, :destroy, :rescan]
+  before_action :validate_profile, only: [ :show, :edit, :update, :destroy, :rescan ]
 
   def index
     @profiles = profile_service.search
@@ -74,5 +74,4 @@ class ProfilesController < ApplicationController
   def profile_params
     params.permit(:id, :search, :name, :url)
   end
-
 end
